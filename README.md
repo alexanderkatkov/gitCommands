@@ -79,4 +79,7 @@ $ git merge --no-ff newBranchName # "--no-ff" creates a commit that there was a 
 $ git push origin oldBranchName 
 $ git branch -D newBranchName # deletes local branch newBranchName
 $ git push origin --delete newBranchName # deletes remote branch newBranchName
+
+# delete local merged branches
+$ git branch --merged | egrep -v "(^\*|masterBranch|devBranch)" | xargs git branch -d
 ```
